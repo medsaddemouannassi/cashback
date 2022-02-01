@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link rel="icon" type="image/png" href="assets/img/logohead.png">
+  <title>CashBack</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <!-- <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="assets/css/flaticon.css">
+
+
+  <!-- =======================================================
+  * Template Name: TheEvent - v4.7.0
+  * Template URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <script src="assets/js/script.js"></script>
+
+  <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet" />
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center ">
+    <div class="container-fluid container-xxl d-flex align-items-center justify-content-between">
+
+      <div id="logo" class="me-auto">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!-- <h1><a href="index.html">The<span>Event</span></a></h1>-->
+        <a href="index.html" class="scrollto"><img src="assets/img/logo.png" alt="" title=""></a>
+      </div>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <script>
+          setHeader();
+        </script>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+
+
+  </header><!-- End Header -->
+
+  <!-- ======= Login ======= -->
+  <section oncontextmenu="return false" class="snippet-body modal" id="loginForm" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="col-lg-5 col-md-7 col-sm-11" style="width: 100%; margin: auto;">
+      <div class="panel border bg-white">
+        <div class="panel-heading">
+          <h3 class="pt-3 font-weight-bold" style="color: #373d41;">Log In to <span
+              style="color: #F82249;">CashBack</span>.tn</h3>
+        </div>
+        <div class="panel-body p-3">
+          <form>
+            <div class="form-group py-2">
+              <div class="input-field">
+                <span class="fas fa-at p-2"></span>
+                <input id="emailLogin" type="email" class="form-control" placeholder="Enter your E-mail"  required/>
+              </div>
+              <div>
+                <span id="emailLoginError"></span>
+              </div>
+            </div>
+            <div class="form-group py-1 pb-2">
+              <div class="input-field">
+                <span class="fas fa-lock px-2"></span>
+                <input id="passwordLogin" type="password" class="form-control" placeholder="Enter your Password"
+                  required />
+                <span onclick="password_show_hide('passwordLogin', 'showPasswordLogin', 'hidePasswordLogin')"><i class="far fa-eye-slash btn bg-white text-muted" id="showPasswordLogin" style="cursor: pointer;"></i><i class="far fa-eye display btn bg-white text-muted" id="hidePasswordLogin" style="cursor: pointer;"></i></span>
+              </div>
+              <div>
+                <span id="passwordLoginError"></span>
+              </div>
+            </div>
+            <div onclick="login()" class="btn btn-secondary btn-block mt-3">Log In</div>
+            <div class="text-center pt-4 text-muted">
+              Don't have an account? <a href="#" style="color: #F82249;" data-toggle="modal" data-target="#signUpForm"
+                data-dismiss="modal" aria-label="Close">Sign up</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <script type="text/javascript"></script>
+  </section><!-- End Login -->
+
+  <!-- ======= Signup ======= -->
+  <section oncontextmenu="return false" class="snippet-body modal" id="signUpForm" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="col-lg-5 col-md-7 col-sm-11" style="width: 100%; margin: auto;">
+      <div class="panel border bg-white">
+        <div class="panel-heading">
+          <h3 class="pt-3 font-weight-bold" style="color: #373d41; ">Sign Up for <span
+              style="color: #F82249;">CashBack</span>.tn</h3>
+        </div>
+        <div class="panel-body p-3">
+          <div>
+            <div class="form-group py-2">
+              <div class="input-field">
+                <span class="far fa-user p-2"></span>
+                <input id="username" class="form-control" type="text" placeholder="Enter your Username" required/>
+              </div>
+              <div>
+                <span id="usernameError"></span>
+              </div>
+            </div>
+            <div class="form-group py-2">
+              <div class="input-field">
+                <span class="fas fa-at p-2"></span>
+                <input id="email" class="form-control" type="email" placeholder="Enter your E-mail" required/>
+              </div>
+              <div>
+                <span id="emailError"></span>
+              </div>
+            </div>
+            <div class="form-group py-1 pb-2">
+              <div class="input-field">
+                <span class="fas fa-lock px-2"></span>
+                <input id="passwordSignUp" class="form-control" type="password" placeholder="Enter your Password" required/>
+                <span onclick="password_show_hide('passwordSignUp', 'showPasswordSignUp', 'hidePasswordSignUp')"><i class="far fa-eye-slash btn bg-white text-muted" id="showPasswordSignUp" style="cursor: pointer;"></i><i class="far fa-eye display btn bg-white text-muted" id="hidePasswordSignUp" style="cursor: pointer;"></i></span>
+              </div>
+              <div>
+                <span id="passwordError"></span>
+              </div>
+            </div>
+            <div class="form-group py-1 pb-2">
+              <div class="input-field">
+                <span class="fas fa-clipboard-check px-2"></span>
+                <input id="confirmPasswordSignUp" type="password" class="form-control" placeholder="Confirm your Password"
+                  required />
+                <span onclick="password_show_hide('confirmPasswordSignUp', 'showConfirmPasswordSignUp', 'hideConfirmPasswordSignUp')"><i class="far fa-eye-slash btn bg-white text-muted" id="showConfirmPasswordSignUp" style="cursor: pointer;"></i><i class="far fa-eye d-none btn bg-white text-muted" id="hideConfirmPasswordSignUp" style="cursor: pointer;"></i></span>
+              </div>
+              <div>
+                <span id="confirmPasswordError"></span>
+              </div>
+            </div>
+            <div onclick="signUp()" class="btn btn-secondary btn-block mt-3">Sign Up</div>
+            <div class="text-center pt-4 text-muted">
+              Have already an account? <a href="#" style="color: #F82249;" data-toggle="modal" data-target="#loginForm"
+                data-dismiss="modal" aria-label="Close">Log In</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <script type="text/javascript"></script>
+  </section><!-- End Signup -->
+
+  <!-- ======= Signup Admin Request ======= -->
+<section oncontextmenu="return false" class="snippet-body modal" id="signUpFormAdmin" tabindex="-1"
+aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="col-lg-5 col-md-7 col-sm-11" style="width: 100%; margin: auto;">
+  <div class="panel border bg-white">
+    <div class="panel-heading">
+      <h3 class="pt-3 font-weight-bold" style="color: #373d41; ">Work with <span
+          style="color: #F82249;">CashBack</span>.tn</h3>
+    </div>
+    <div class="panel-body p-3">
+      <div>
+        <div class="form-group py-2">
+          <div class="input-field">
+            <span class="far fa-user p-2"></span>
+            <input id="userNameAdmin" class="form-control" type="text" placeholder="Enter your Username" required/>
+          </div>
+          <div>
+            <span id="userNameAdminError"></span>
+          </div>
+        </div>
+        <div class="form-group py-2">
+          <div class="input-field">
+            <span class="fas fa-at p-2"></span>
+            <input id="emailAdmin" class="form-control" type="email" placeholder="Enter your E-mail" required/>
+          </div>
+          <div>
+            <span id="emailAdminError"></span>
+          </div>
+        </div>
+        <div class="form-group py-1 pb-2">
+          <div class="form-group py-2">
+            <div class="input-field">
+              <span class="fas fa-lock px-2"></span>
+              <input type="password" class="form-control" placeholder="Enter your Password"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your Password'" required id="passwordAdmin"/><span onclick="password_show_hide('passwordAdmin', 'showPasswordAdmin', 'hidePasswordAdmin')"><i class="far fa-eye-slash" id="showPasswordAdmin" style="cursor: pointer;"></i><i class="far fa-eye d-none" id="hidePasswordAdmin" style="cursor: pointer;"></i></span>
+            </div>
+            <div>
+              <span id="passwordAdminError"></span>
+            </div>
+          </div>
+          <div class="form-group py-2">
+            <div class="input-field">
+              <span class="fas fa-clipboard-check px-2"></span>
+              <input type="password" class="form-control" placeholder="Confirm your Password" required id="confirmPasswordAdmin" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Confirm your Password'"/><span onclick="password_show_hide('confirmPasswordAdmin', 'showConfirmPasswordAdmin', 'hideConfirmPasswordAdmin')"><i class="far fa-eye-slash" id="showConfirmPasswordAdmin" style="cursor: pointer;"></i><i class="far fa-eye d-none" id="hideConfirmPasswordAdmin" style="cursor: pointer;"></i></span>
+            </div>
+          </div>
+          <div>
+            <span id="confirmPasswordAdminError"></span>
+          </div>
+          <div class="form-group py-2">
+            <div class="input-field">
+              <i class="bi bi-telephone-fill"></i>
+              <input id="phoneAdmin" class="form-control" type="tel" placeholder="Enter your Phone Number" name="phone"
+              pattern="[0-9]{2}-[0-9]{3}-[0-9]{3}" required/>
+            </div>
+            <div>
+              <span id="phoneAdminError"></span>
+            </div>
+          </div>
+        <div  class="btn btn-secondary btn-block mt-3" onclick="signupForAdmin()">Send Business Request</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<script type="text/javascript"></script>
+</section><!-- End Signup Admin Request -->
+
+<div id="editProfileForm">
+  <script>
+    editProfile();
+  </script>
+</div>
+
+  <!-- ======= My Selection ======= -->
+  <section oncontextmenu="return false" class="snippet-body modal" id="mySelection" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="col-lg-5 col-md-9 col-sm-11" style="width: 100%; margin: auto;">
+      <div class="panel border bg-white">
+        <div class="panel-heading">
+          <h3 class="pt-3 font-weight-bold" style="color: #373d41;">My selection in <span
+              style="color: #F82249;">CashBack</span>.tn</h3>
+        </div>
+        <div class="panel-body p-3">
+          <div>
+            <div class="form-group py-2">
+              <div class="modal-body" id="selection">
+                <script>
+                  mySelection();
+                </script>
+              </div>
+              <div>
+                <div class="form-group py-2">
+                  <div class="modal-body d-flex">
+                    <img src="assets/img/printericon.png" alt="" style="height: 100%;">
+                    <p style="margin-left: 17px;margin-top: 3px;">My printer is on and connected to my computer</p>
+                  </div>
+                </div>
+                <div class="form-group py-2">
+                  <div class="modal-body d-flex">
+                    <img src="assets/img/docicon.png" alt="" style="height: 100%;"> 
+                    <p style="margin-left: 17px;margin-top: 3px;">I have white paper and ink in my printer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="#" data-toggle="modal"
+            data-target="#signUpForm" data-dismiss="modal"><button id="download" onclick="printSelection()" class="btn btn-secondary btn-block mt-3">Print</button></a>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <script type="text/javascript"></script>
+  </section><!-- End My Selection -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" style="background: url(assets/img/4484625.jpg);width: 100%;height: 100vh;background-size: cover;overflow: hidden;position: relative;">
+    <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+      <h1 class="mb-4 pb-0">The Best Way To<br><span>Increase</span> Your CashBack</h1>
+      <p class="mb-4 pb-0">Join the millions of shoppers who use the <span
+        style="color: #F82249;">CashBack</span>.tn website to shop and save easily your money</p>
+      <div class="search-sec" style="margin: -20px;">
+        <div class="container">
+          <form action="#" method="post" novalidate="novalidate">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="row justify-content-center">
+                  <div class="col-lg-3 col-md-3 col-sm-12 p-0 m-1">
+                    <input type="text" class="form-control search-slt" id="couponSearch"  placeholder="What are you looking ?">
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-12 p-0 m-1">
+                    <select class="form-control search-slt" id="productCategory">
+                      <option>Choose Category</option>
+                      <script>
+                        displayCategoriesDashboard("productCategory");
+                      </script>
+                    </select>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-12 p-0 m-1">
+                    <a href="search-coupon.html#speakers" onclick="searchByCategory('productCategory', 'couponSearch')"><button type="button" class="btn btn-danger wrn-btn">Search</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="search-sec-mobile">
+        <div class="container">
+          <form action="#" method="post" novalidate="novalidate">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="row justify-content-center">
+                  <div class="col-lg-3 col-md-3 col-sm-12 p-0 m-1 w-75" id="searchButton">
+                    <input type="text" class="form-control input-sm" id="couponSearchMobile" placeholder="What are you looking ?">
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-12 p-0 m-1 w-75">
+                    <select class="form-control input-sm" id="productCategoryMobile">
+                      <option>Choose Category</option>
+                      <script>
+                        displayCategoriesDashboard("productCategoryMobile");
+                      </script>
+                    </select>
+                  </div>
+                  <div class="col-lg-3 col-md-3 col-sm-12 p-0 mt-1 w-75">
+                    <a href="search-coupon.html#speakers" onclick="searchByCategory('productCategoryMobile','couponSearchMobile')"><button type="button" class="btn btn-danger wrn-btn">Search</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <a href="#speakers" class="about-btn scrollto">See All Coupons</a>
+    </div>
+  </section><!-- End Hero Section -->
+
+
+  <main id="main">
+
+
+
+    <!-- ======= Speakers Section ======= -->
+    <section id="speakers">
+      <div class="container" id="speaker" data-aos="fade-up">
+        <div class="section-header">
+          <h2>All Coupons</h2>
+          <p>Here are our coupons</p>
+        </div>
+
+        <div class="row" id="productDisplay">
+          <script>
+            displayCouponShop();
+            searchByCategory();
+          </script>
+        </div>
+      </div>
+
+    </section><!-- End Speakers Section -->
+
+     <!-- ======= Business Request ======= -->
+     <section id="subscribe">
+      <div class="container" data-aos="zoom-in">
+        <div class="section-header">
+          <h2>ADD YOUR BUSINESS</h2>
+          <p>Do you want to Add your business listing with us ?</p>
+          <p><span style="color: #F82249;">CashBack</span> offer you to list your business with us and we very much able to promote your business</p>
+        </div>
+
+        <div>
+          <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-10 d-flex" style="justify-content: center;">
+              <button type="submit" class="ms-2"data-toggle="modal" data-target="#signUpFormAdmin"
+              data-dismiss="modal" aria-label="Close">Business Request</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Business Request -->
+
+    <!-- ======= Contact us Section ======= -->
+    <section id="contact" class="section-bg">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Contact Us</h2>
+          <p>We are always in your service</p>
+        </div>
+
+        <div class="row contact-info">
+
+          <div class="col-md-4">
+            <div class="contact-address">
+              <i class="bi bi-geo-alt"></i>
+              <h3>Address</h3>
+              <address>A1, Immeuble Yasmin Tower , Bloc B, 5 Bd de la Terre, Tunis</address>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="bi bi-phone"></i>
+              <h3>Phone Number</h3>
+              <p><a href="tel:+21622222222">+216 22 22 22 22</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-email">
+              <i class="bi bi-envelope"></i>
+              <h3>Email</h3>
+              <p><a href="mailto:info@cashback.tn">info@cashback.tn</a></p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="form">
+          <div  class="reclamation">
+            <div class="row">
+              <div class="form-group col-md-6 mt-3 mt-md-0">
+                <input type="text"  class="form-control" id="usernameuser" placeholder="Your Name" >
+                <span id="usernameMessageError"></span>
+
+              </div>
+              <div class="form-group col-md-6 mt-3 mt-md-0">
+                <input type="email" class="form-control"  id="emailuser" placeholder="Your Email" >
+                <span id="emailMessageError"></span>
+
+              </div>
+              <div>
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <input type="text" class="form-control"  id="subject" placeholder="Subject" >
+            </div>
+            <div>
+              <span id="subjectError"></span>
+            </div>
+            <div class="form-group mt-3">
+              <textarea class="form-control" id="message"  rows="5" placeholder="Message" ></textarea>
+            </div>
+            <div>
+              <span id="messageError"></span>
+            </div>
+            <!-- <div class="my-3"> -->
+              <!-- <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div> -->
+            <!-- </div> -->
+            <div class="text-center"><button type="submit" onclick="addMessages()">Send Message</button></div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3  col-md-6 footer-info">
+            <img src="assets/img/logo.png" alt="TheEvenet">
+            <p>We offers you printable coupons and cashback offers valid with our partners.
+              Our goal is to support you every day by offering you promotions on the products you love, but also to allow you to discover the innovations of the brands at reduced prices thanks to our printable coupons.</p>
+          </div>
+
+          <div class="col-lg-4 offset-lg-1 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#about">About us</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#works">How It Works</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#topOffers">Top Offers</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#subscribe">Add Your Business</a></li>
+            </ul>
+          </div>
+
+
+          <div class="col-lg-3 offset-lg-1 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              A1, Immeuble Yasmin Tower ,<br> Bloc B, 5 Bd de la Terre, Tunis<br>
+              <strong>Phone:</strong> +216 22 22 22 22<br>
+              <strong>Email:</strong> info@cashback.tn<br>
+            </p>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>CashBack</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+        All the links in the footer should remain intact.
+        You can delete the links only if you purchased the pro version.
+        Licensing information: https://bootstrapmade.com/license/
+        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TheEvent
+      -->
+        Designed by <a href="https://bootstrapmade.com/">CashBack</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    var superAdmin = localStorage.getItem('superAdminAdded');
+    if (superAdmin != 'true') {
+      superAdminAdded();
+    }
+  </script>
+
+</body>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+  body {
+    height: 100vh;
+    background: linear-gradient(to top, #c9c9ff 50%, #9090fa 90%) no-repeat;
+  }
+
+  .container {
+    margin: 50px auto;
+  }
+
+  .panel-heading {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  #forgot {
+    min-width: 100px;
+    margin-left: auto;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .form-inline label {
+    padding-left: 10px;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .btn.btn-primary {
+    margin-top: 20px;
+    border-radius: 15px;
+  }
+
+  .panel {
+    border-radius: 12px;
+  }
+
+  #loginForm, #editProfile,
+  #signUpForm, #mySelection, #signUpFormAdmin {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding-top: 2%;
+  }
+
+  .input-field {
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    color: #5A6268;
+  }
+
+  #username,
+  #userNameAdmin,
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"] {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .fa-eye-slash.btn {
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+
+  .img-modal {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  a[target="_blank"] {
+    position: relative;
+    transition: all 0.1s ease-in-out;
+  }
+
+  .bordert {
+    border-top: 1px solid #aaa;
+    position: relative;
+  }
+
+  .bordert:after {
+    content: "or connect with";
+    position: absolute;
+    top: -13px;
+    left: 33%;
+    background-color: #fff;
+    padding: 0px 8px;
+  }
+
+  @media (max-width: 360px) {
+    #forgot {
+      margin-left: 0;
+      padding-top: 10px;
+    }
+
+    body {
+      height: 100%;
+    }
+
+    .container {
+      margin: 30px 0;
+    }
+
+    .bordert:after {
+      left: 25%;
+    }
+  }
+
+  .display {
+    display: none;
+  }
+
+  .block {
+    display: block;
+  }
+  #contact .reclamation button[type=submit] {
+background: #f82249;
+    border: 0;
+    padding: 10px 40px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
+    cursor: pointer;
+}
+#message{
+  height: 100% !important;
+}
+#emailuser{
+  border: 1px solid #ced4da !important;
+}
+</style>
+
+</html>
